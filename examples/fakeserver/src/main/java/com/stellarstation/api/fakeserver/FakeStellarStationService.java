@@ -123,6 +123,7 @@ class FakeStellarStationService extends StellarStationServiceImplBase {
       ByteString payload, StreamObserver<SatelliteStreamResponse> responseObserver) {
     SatelliteStreamResponse response =
         SatelliteStreamResponse.newBuilder()
+            .setStreamId("sstream-alpha-5-512643e5-ac5d-47b8-82d8-fd44b0370273") // TODO: autogenerate new id per connection
             .setReceiveTelemetryResponse(
                 ReceiveTelemetryResponse.newBuilder()
                     .addTelemetry(
